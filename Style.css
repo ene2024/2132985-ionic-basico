@@ -1,0 +1,15 @@
+.diseño{
+    background-color: #ad7ff7;
+    border-color: #5512f1;
+    border: 2;
+  }
+
+body{
+    background-color: #f2dafb;;
+  }
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-family: Perpetua;
+}
