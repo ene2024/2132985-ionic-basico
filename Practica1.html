@@ -7,33 +7,41 @@
   <title>Practica Lab</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="script.js"> </script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 </head>
 
 <body>
-  <link rel="stylesheet" href=style.css>
-  <h1>Practica de laboratorio 1</h1>
-  <p>Escribe algo en el siguiente recuadro y consulta la consola del sitio!</p>
-  <input type="text" name="texto" id="texto" placeholder="Escribe...">
-  <input type="button" class="diseño" value="Click" onclick="obtenertxt()">
-  <br><br>
-  <input type="text" name="texto" id="texto2" placeholder="Tu texto...">
-  <br><br>
-  <input type="button" class="diseño" value="Borrar" onclick="limpiartxt()">
-  <br><br>
-  <p>¿Deseas iniciar sesión??3</p>
-  <p>Ingresa tu nombre de usuario</p>
-  <input type="text" name="texto" id="usuarioS" placeholder="Nombre de usuario">
-  <p>Ingresa tu contraseña</p>
-  <input type="password" name="texto" id="contrasena1" placeholder="Contraseña">
-  <input type="button" class="diseño" value="Login" onclick="login()">
-  <br><br><br>
-  <p>¿Deseas registrarte?</p>
-  <p>Ingresa tu nombre de usuario</p>
-  <input type="text" name="texto" id="usuarioR" placeholder="Nuevo nombre de usuario">
-  <p>Ingresa tu contraseña</p>
-  <input type="password" name="texto" id="contrasena2" placeholder="Contraseña">
-  <input type="button" class="diseño" value="Registro" onclick="registro()">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Presupuesto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <h1>Content</h1>
+    <ion-list>
+      <ion-item>
+        <ion-input label="Tipo de gasto" id="tipo"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input label="Monto" id="monto"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button fill="outline" color="tertiary" onclick="calcular()">Agregar</ion-button>
   
-  </body>
+    <div class="Resultados">
+    </div>
+
+    <div class="Total">
+
+    </div>
+
+  </ion-content>
+
+
+  <script src="script.js"> </script>
+</body>
 
 </html>
