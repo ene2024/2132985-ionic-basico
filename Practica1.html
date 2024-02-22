@@ -13,30 +13,35 @@
 </head>
 
 <body>
-  <ion-header>
+  <ion-header class="titulo">
     <ion-toolbar>
       <ion-title>Presupuesto</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <ion-content class="ion-padding">
-    <h1>Content</h1>
+    <h1>Gastos</h1>
     <ion-list>
       <ion-item>
         <ion-input label="Tipo de gasto" id="tipo"></ion-input>
       </ion-item>
-    
+
       <ion-item>
         <ion-input label="Monto" id="monto"></ion-input>
       </ion-item>
     </ion-list>
     <ion-button fill="outline" color="tertiary" onclick="calcular()">Agregar</ion-button>
-  
-    <div class="Resultados">
-    </div>
+    
+    <ion-content>
+      <h1>Resultados</h1>
+      <div class="Resultados">
+      </div>
+    </ion-content>
 
-    <div class="Total">
-
-    </div>
+    <ion-content>
+      <h1>Total a pagar</h1>
+      <div class="Total"></div>
+    </ion-content>
 
   </ion-content>
 
