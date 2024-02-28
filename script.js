@@ -29,6 +29,7 @@ function calcular() {
     console.log(montoint);
     total = total + montoint;
     console.log(total);
+
     let busquedaG = document.querySelector('.Total');
     let divN = document.createElement("div");
     divN.setAttribute("class", "divNUEVO");
