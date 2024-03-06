@@ -12,6 +12,22 @@ h1{
     text-align: center;
     font-weight: bold;
     font-family: Perpetua;
+    background-color: #5512f1;
+    color:aliceblue
+}
+
+.Resultados{
+  padding-bottom: 80vw;
+}
+
+.ititulo{
+  text-align: center;
+  background-color: #ad7ff7;
+  color:aliceblue
+}
+
+.der{
+  display: inline-block;
 }
 
 ion-col {
