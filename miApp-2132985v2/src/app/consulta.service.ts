@@ -5,9 +5,16 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ConsultaService {
+  idProducto: any;
 
   constructor(private http: HttpClient) { }
   getProductos() {    
     return this.http.get('https://fakestoreapi.com/products')
   }
+
+  getProductoDetalle(idProducto: string){
+    return this.http.get('https://fakestoreapi.com/products/'+idProducto)
+  }
+
+  
 }

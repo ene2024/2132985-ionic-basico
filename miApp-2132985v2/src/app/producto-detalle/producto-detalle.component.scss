@@ -15,10 +15,19 @@ ion-card{
 
 }
 
-h6{
+p{
+    font-weight: 100;
     color:aliceblue;
 }
 
 ion-content{
     --background: rgb(13, 35, 54);
+    height: auto;
 }
+
+ion-button{
+    align-self: center;
+    width: 90%;
+    margin-left: 5vw;
+}
+

@@ -1,0 +1,39 @@
+<ion-app>
+  <ion-content>
+    <ion-card>
+      <ion-row>
+        <ion-card-title>{{producto.title}}</ion-card-title>
+      </ion-row>
+      <ion-card-content>
+        <ion-row>
+
+          <ion-col id="imagen" size="3">
+            <img width="250px" height="250px" src="{{producto.image}}" alt="">
+          </ion-col>
+
+          <ion-col size="2">
+            <ion-row>
+              <ion-card-title>Price ${{producto.price}}</ion-card-title>
+            </ion-row>
+            <ion-col>
+              <ion-row>
+                <p>Ranking Rate: {{producto.rating.rate}}</p>
+              </ion-row>
+              <ion-row>
+                <p>Ranking count: {{producto.rating.count}}</p>
+              </ion-row>
+            </ion-col>
+          </ion-col>
+
+          <ion-col size="4">
+            <p>Description: {{producto.description}}</p>
+          </ion-col>
+          
+        </ion-row>
+
+      </ion-card-content>
+
+    </ion-card>
+    <ion-button>Comprar ahora!</ion-button>
+  </ion-content>
+</ion-app>
