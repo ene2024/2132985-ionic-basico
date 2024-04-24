@@ -1,10 +1,7 @@
-<h1>
-  Lista de alumnos
-</h1>
-<div *ngFor="let alumno of alumnos">
-  <!-- <p>Alumno: {{alumno}}</p> -->
+<!--<div *ngFor="let alumno of alumnos">
+  //<p>Alumno: {{alumno}}</p>
   <ion-list>
-    <!-- <ion-item> Alumno: {{alumno}}</ion-item> -->
+    ///<ion-item> Alumno: {{alumno}}</ion-item> //
     <ion-item-sliding>
       <ion-item-options side="start">
         <ion-item-option color="success">Favoritos</ion-item-option>
@@ -15,11 +12,94 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <!--<ion-item-option id="open-action-sheet"color="danger">Eliminar</ion-item-option>-->
+        //<ion-item-option id="open-action-sheet"color="danger">Eliminar</ion-item-option>//
         <ion-button color="danger" (click)="setOpen(true)">Eliminar</ion-button>
         <ion-action-sheet [isOpen]="isActionSheetOpen" header="Actions" [buttons]="actionSheetButtons"
           (didDismiss)="setOpen(false)"></ion-action-sheet>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
-</div>
+</div>-->
+
+
+<ion-app>
+  <ion-header>
+    <h1>
+      Lista de alumnos
+    </h1>
+  </ion-header>
+  <ion-content>
+    <form #alumnosForm="ngForm" (ngSumbit)="agregarAlumno()">
+      <ion-label>Nombre del alumno: </ion-label>
+      <ion-input required [(ngModel)]="alumno.nombre" placeholder="Ejemplo: Valeria Rodriguez"
+        name="nombre"></ion-input>
+      <ion-label>
+        <ion-checkbox [(ngModel)]="alumno.presente" name="presente"></ion-checkbox> Presente
+      </ion-label>
+      <div>
+        <ion-button (click)="agregarAlumno()">Agregar</ion-button>
+      </div>
+    </form>
+
+
+    <ion-list *ngFor="let alumno of alumnos">
+
+      <ion-item-sliding>
+        <ion-item-options side="start">
+          <ion-item-option color="success">Favoritos</ion-item-option>
+        </ion-item-options>
+
+        <ion-item>
+          <ion-col>
+            <ion-label>Alumno: {{alumno.nombre}}</ion-label>
+          </ion-col>
+          <ion-col> 
+            <ion-label>Presente: {{ispresente(alumno.presente)}}</ion-label></ion-col>
+        </ion-item>
+
+        <ion-item-options side="end">
+
+          <ion-button color="danger" (click)="setOpen(true)">Eliminar</ion-button>
+          <ion-action-sheet [isOpen]="isActionSheetOpen" header="Actions" [buttons]="actionSheetButtons"
+            (didDismiss)="setOpen(false)"></ion-action-sheet>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-content>
+
+
+</ion-app>
+
+<!--<ion-content>
+    <form #alumnosForm="ngForm" (ngSumbit)="agregarAlumno()">
+      <ion-label>Nombre del alumno: </ion-label>
+      <ion-input required [(ngModel)]="alumno.nombre" placeholder="Ejemplo: Valeria Rodriguez"
+        name="nombre"></ion-input>
+      <ion-label>
+        <ion-checkbox [(ngModel)]="alumno.presente" name="presente"></ion-checkbox> Presente
+      </ion-label>
+      <div>
+        <ion-button (click)="agregarAlumno()" >Agregar</ion-button>
+      </div>
+    </form>
+    <div *ngFor="let alumno from alumnos">
+      <ion-list>
+        <p>alumno1</p>
+        <ion-item-sliding>
+          <ion-item-options side="start">
+            <ion-item-option color="success">Favoritos</ion-item-option>
+          </ion-item-options>
+
+          <ion-item>
+            Alumno: {{alumno.nombre}}
+          </ion-item>
+
+          <ion-item-options side="end">
+
+            <ion-button color="danger" (click)="setOpen(true)">Eliminar</ion-button>
+            <ion-action-sheet [isOpen]="isActionSheetOpen" header="Actions" [buttons]="actionSheetButtons"
+              (didDismiss)="setOpen(false)"></ion-action-sheet>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>-->
