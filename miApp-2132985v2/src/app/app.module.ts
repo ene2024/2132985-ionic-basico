@@ -9,6 +9,7 @@ import { ProductosComponent } from './productos/productos.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 import { FormsModule } from '@angular/forms';
+import { CamaraComponent } from './camara/camara.component';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     ListaAlumnosComponent,
     ProductosComponent,
-    ProductoDetalleComponent
+    ProductoDetalleComponent,
+    CamaraComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
