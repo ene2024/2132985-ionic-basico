@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FotoService } from '../foto.service';
+import { Foto } from '../foto.model';
 
 @Component({
   selector: 'app-camara',
@@ -8,15 +9,17 @@ import { FotoService } from '../foto.service';
 })
 export class CamaraComponent  implements OnInit {
 
-  constructor(private tomarpic : FotoService) { }
+  constructor(public foto : FotoService) { }
+
+  public fotos:Foto[] =this.foto.fotos;
 
   ngOnInit() {}
 
   tomarfoto(){
     console.log("vbgb ");
-    this.tomarpic.addNewToGallery()
+    this.foto.addNewToGallery()
   }
 
-
+  
 
 }
