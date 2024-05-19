@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">miApp-2132985v2</string>
+    <string name="title_activity_main">miApp-2132985v2</string>
+    <string name="package_name">com.valeria.app</string>
+    <string name="custom_url_scheme">com.valeria.app</string>
+</resources>
